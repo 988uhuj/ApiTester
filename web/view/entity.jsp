@@ -41,8 +41,8 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="./view/index.jsp">Service</a></li>
-                <li><a href="./view/entity.jsp">Entity</a></li>
+                <li><a href="./view/index.jsp">Service</a></li>
+                <li class="active"><a href="./view/entity.jsp">Entity</a></li>
             </ul>
         </div>
         <!-- /.nav-collapse -->
@@ -67,30 +67,20 @@
             </div>
             <!--/row-->
             <div id="login">
-                <div class="bs-callout bs-callout-warning">
-                    <h4>用户登陆</h4>
-                </div>
                 <blockquote>
-                    <p>login</p>
+                    <p>User</p>
                 </blockquote>
                 <table class="table table-hover table-bordered">
                     <tr>
-                        <th>#</th>
                         <th>类型</th>
                         <th>含义</th>
                     </tr>
-                    <tr class="active">
-                        <td>参数 1</td>
+                    <tr>
                         <td><a tabindex="0" role="button" data-toggle="popover"
                                data-trigger="focus" title="Dismissible popover"
                                data-content="And here's some amazing content. It's very engaging. Right?">String</a>
                         </td>
                         <td>account 用户账号</td>
-                    </tr>
-                    <tr>
-                        <td>返回值</td>
-                        <td>Boolean</td>
-                        <td>return true 代表已登陆</td>
                     </tr>
                 </table>
 
@@ -104,10 +94,6 @@
                         json
                     </div>
                 </div>
-
-                <table id="table" class="table table-hover table-bordered">
-
-                </table>
             </div>
         </div>
         <!--/.col-xs-12.col-sm-9-->
@@ -142,7 +128,6 @@
 <script src="../res/plugin/ie10-viewport-bug-workaround.js"></script>
 
 <script src="../res/plugin/offcanvas.js"></script>
-<script src="../res/js/common.js"></script>
 <script src="../res/js/index.js"></script>
 
 
