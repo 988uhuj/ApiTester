@@ -81,7 +81,10 @@
                     </tr>
                     <tr class="active">
                         <td>参数 1</td>
-                        <td>String</td>
+                        <td><a tabindex="0" role="button" data-toggle="popover"
+                               data-trigger="focus" title="Dismissible popover"
+                               data-content="And here's some amazing content. It's very engaging. Right?">String</a>
+                        </td>
                         <td>account 用户账号</td>
                     </tr>
                     <tr>
@@ -128,13 +131,14 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
-<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="../res/plugin/jquery.min.js"></script>
+<script src="../res/plugin/bs/js/bootstrap.min.js"></script>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="../res/plugin/ie10-viewport-bug-workaround.js"></script>
 
 <script src="../res/plugin/offcanvas.js"></script>
+<script src="../res/js/index.js"></script>
 
 
 </body>

@@ -1,0 +1,42 @@
+apply plugin: 'war'
+
+sourceCompatibility = 1.7
+
+archivesBaseName = 'finance-api'
+version = '1.0-SNAPSHOT'
+group = 'com.netease'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+            srcDir 'src-generate'
+        }
+        resources {
+            srcDir 'src-template'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'org.freemarker:freemarker:2.3.20'
+    compile 'org.json:json:20140107'
+}
+
+jar {
+    exclude 'com/netease/common/**'
+    exclude 'com/netease/apigenerate/**'
+    exclude '*.ftl'
+}
+
+task execute(type:JavaExec) {
+    main = 'com.netease.service.Generate'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+jar.dependsOn execute
