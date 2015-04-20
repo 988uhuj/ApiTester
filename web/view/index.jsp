@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="zh-CN">
-<jsp:include page="./path.jsp"/>
+<%--<jsp:include page="./path.jsp"/>--%>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -66,7 +66,7 @@
                     responsive-range viewport sizes to see it in action.</p>
             </div>
             <!--/row-->
-            <div id="login">
+            <div id="service_list">
                 <div class="bs-callout bs-callout-warning">
                     <h4>用户登陆</h4>
                 </div>

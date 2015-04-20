@@ -1,10 +1,19 @@
 $(document).ready(function () {
     $('[data-toggle="popover"]').popover();
 
-    createTable($('#table'), dataList);
+    var serviceList = $('#service_list');
+    var loginDiv = createServiceItem(loginService);
+    var table = createTable(loginParamsList);
+    loginDiv.append(table);
+    serviceList.append(loginDiv);
 });
 
-var dataList = [
+var loginService = {
+    serviceName: 'login',
+    comment: "This is a login service."
+}
+
+var loginParamsList = [
     {
         intro: "参数 1",
         type: "String",
@@ -16,10 +25,17 @@ var dataList = [
         type: "Long",
         description: "hahaLong",
         default_value: "defaultLong"
+    },
+    {
+        intro: "返回值",
+        type: "String",
+        description: "hahaReturn",
+        default_value: "defaultReturn"
     }
 ];
 
-function createTable(table, dataList) {
+function createTable(dataList) {
+    var table = $('<table class="table table-hover table-bordered">');
     var columns = [
         {
             name: 'intro',
@@ -40,4 +56,5 @@ function createTable(table, dataList) {
     ];
     table.append(commonGetThead(columns));
     table.append(commonGetTbody(dataList, columns));
+    return table;
 }

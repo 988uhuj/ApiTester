@@ -37,3 +37,17 @@ function commonGetThead(columns){
 
     return thead;
 }
+
+function createServiceItem(serviceItem){
+    var div = $('<div id="' + serviceItem.serviceName + '">');
+
+    var nameBlock = $('<blockquote>');
+    nameBlock.html(serviceItem.serviceName);
+    div.append(nameBlock);
+
+    var commentP = $('<p>');
+    commentP.html(serviceItem.comment);
+    div.append(commentP);
+
+    return div;
+}
