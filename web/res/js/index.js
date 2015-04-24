@@ -3,36 +3,37 @@ $(document).ready(function () {
 
     var serviceList = $('#service_list');
     var loginDiv = createServiceItem(loginService);
-    var table = createTable(loginParamsList);
+    var table = createTable(loginService.paramsList);
     loginDiv.append(table);
     serviceList.append(loginDiv);
+    serviceList.append("<hr/>");
 });
 
 var loginService = {
     serviceName: 'login',
-    comment: "This is a login service."
+    comment: "This is a login service.",
+    paramsList: [
+        {
+            intro: "参数",
+            type: "String",
+            description: "hahaha",
+            default_value: "defaultHa"
+        },
+        {
+            intro: "参数",
+            type: "Long",
+            description: "hahaLong",
+            default_value: "defaultLong"
+        },
+        {
+            intro: "返回值",
+            type: "String",
+            description: "hahaReturn",
+            default_value: "defaultReturn"
+        }
+    ]
 }
 
-var loginParamsList = [
-    {
-        intro: "参数 1",
-        type: "String",
-        description: "hahaha",
-        default_value: "defaultHa"
-    },
-    {
-        intro: "参数 2",
-        type: "Long",
-        description: "hahaLong",
-        default_value: "defaultLong"
-    },
-    {
-        intro: "返回值",
-        type: "String",
-        description: "hahaReturn",
-        default_value: "defaultReturn"
-    }
-];
 
 function createTable(dataList) {
     var table = $('<table class="table table-hover table-bordered">');
@@ -43,7 +44,8 @@ function createTable(dataList) {
         },
         {
             name: 'type',
-            title: '类型'
+            title: '类型',
+            render: renderEntity
         },
         {
             name: 'description',
@@ -57,4 +59,8 @@ function createTable(dataList) {
     table.append(commonGetThead(columns));
     table.append(commonGetTbody(dataList, columns));
     return table;
+}
+
+function renderEntity(row, value, parent) {
+    parent.append('<a href="../../view/entity.jsp#' + value + '">' + value + '</a>');
 }
