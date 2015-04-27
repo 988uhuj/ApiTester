@@ -144,6 +144,7 @@
 <script src="../res/plugin/offcanvas.js"></script>
 <script src="../res/js/common.js"></script>
 <script src="../res/js/index.js"></script>
+<script src="../res/js/services.js"></script>
 
 
 </body>

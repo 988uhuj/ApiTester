@@ -39,10 +39,10 @@ function commonGetThead(columns){
 }
 
 function createServiceItem(serviceItem){
-    var div = $('<div id="' + serviceItem.serviceName + '">');
+    var div = $('<div id="' + serviceItem.name + '">');
 
     var nameBlock = $('<blockquote>');
-    nameBlock.html(serviceItem.serviceName);
+    nameBlock.html(serviceItem.name);
     div.append(nameBlock);
 
     var commentP = $('<p>');
@@ -50,4 +50,57 @@ function createServiceItem(serviceItem){
     div.append(commentP);
 
     return div;
+}
+
+
+function createTable(dataList) {
+    var table = $('<table class="table table-condensed table-hover table-bordered">');
+    var columns = [
+        {
+            name: 'intro',
+            title: '#'
+        },
+        {
+            name: 'type',
+            title: '类型',
+            render: renderEntity
+        },
+        {
+            name: 'comment',
+            title: '含义'
+        },
+        {
+            name: 'default_value',
+            title: '默认值'
+        },
+    ];
+    table.append(commonGetThead(columns));
+    table.append(commonGetTbody(dataList, columns));
+    return table;
+}
+
+function renderEntity(row, value, parent) {
+    parent.append('<a href="../../view/entity.js.jsp#' + value + '">' + value + '</a>');
+}
+
+function createEntityTable(dataList) {
+    var table = $('<table class="table table-condensed table-hover table-bordered">');
+    var columns = [
+        {
+            name: 'type',
+            title: '类型',
+            render: renderEntity
+        },
+        {
+            name: 'comment',
+            title: '含义'
+        },
+        {
+            name: 'default_value',
+            title: '默认值'
+        }
+    ];
+    table.append(commonGetThead(columns));
+    table.append(commonGetTbody(dataList, columns));
+    return table;
 }

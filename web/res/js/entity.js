@@ -1,17 +1,10 @@
-var user = {
-    class_name: "User",
-    comment: "This is user entity",
-    members: [
-        {
-            name: "userName",
-            type: "String",
-            comment: "This is userName"
-        },
-        {
-            name: "age",
-            type: "Integer",
-            comment: "This is user age"
-        },
+$(document).ready(function () {
+    var serviceList = $('#service_list');
 
-    ]
-};
+    var userDiv = createServiceItem(user);
+    var userTable = createTable(user.paramsList);
+    userDiv.append(userTable);
+    serviceList.append(userDiv);
+    serviceList.append("<hr/>");
+
+});

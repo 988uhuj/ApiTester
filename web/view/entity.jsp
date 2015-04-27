@@ -66,23 +66,7 @@
                     responsive-range viewport sizes to see it in action.</p>
             </div>
             <!--/row-->
-            <div id="login">
-                <blockquote>
-                    <p>User</p>
-                </blockquote>
-                <table class="table table-hover table-bordered">
-                    <tr>
-                        <th>类型</th>
-                        <th>含义</th>
-                    </tr>
-                    <tr>
-                        <td><a tabindex="0" role="button" data-toggle="popover"
-                               data-trigger="focus" title="Dismissible popover"
-                               data-content="And here's some amazing content. It's very engaging. Right?">String</a>
-                        </td>
-                        <td>account 用户账号</td>
-                    </tr>
-                </table>
+            <div id="service_list">
 
                 <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
                    aria-controls="collapseExample">
@@ -128,7 +112,9 @@
 <script src="../res/plugin/ie10-viewport-bug-workaround.js"></script>
 
 <script src="../res/plugin/offcanvas.js"></script>
-<script src="../res/js/index.js"></script>
+<script src="../res/js/entity.js"></script>
+<script src="../res/js/services.js"></script>
+<script src="../res/js/common.js"></script>
 
 
 </body>
