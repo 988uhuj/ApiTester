@@ -80,7 +80,7 @@ function createTable(dataList) {
 }
 
 function renderEntity(row, value, parent) {
-    parent.append('<a href="../../view/entity.js.jsp#' + value + '">' + value + '</a>');
+    parent.append('<a href="../../view/entity.jsp#' + value + '">' + value + '</a>');
 }
 
 function createEntityTable(dataList) {

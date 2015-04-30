@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     var serviceList = $('#service_list');
     var loginDiv = createServiceItem(loginService);
-    var table = createTable(loginService.paramsList);
+    var table = createTable(loginService.params);
     loginDiv.append(table);
     serviceList.append(loginDiv);
     serviceList.append("<hr/>");
