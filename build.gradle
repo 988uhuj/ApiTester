@@ -14,7 +14,7 @@ sourceSets {
     main {
         java {
             srcDir 'src'
-            srcDir 'src-generate'
+//            srcDir 'src-generate'
         }
         resources {
             srcDir 'src-template'
