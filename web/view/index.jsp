@@ -67,55 +67,15 @@
             </div>
             <!--/row-->
             <div id="service_list">
-                <div class="bs-callout bs-callout-warning">
-                    <h4>用户登陆</h4>
-                </div>
-                <blockquote>
-                    <p>login</p>
-                </blockquote>
-                <table class="table table-hover table-bordered">
-                    <tr>
-                        <th>#</th>
-                        <th>类型</th>
-                        <th>含义</th>
-                    </tr>
-                    <tr class="active">
-                        <td>参数 1</td>
-                        <td><a tabindex="0" role="button" data-toggle="popover"
-                               data-trigger="focus" title="Dismissible popover"
-                               data-content="And here's some amazing content. It's very engaging. Right?">String</a>
-                        </td>
-                        <td>account 用户账号</td>
-                    </tr>
-                    <tr>
-                        <td>返回值</td>
-                        <td>Boolean</td>
-                        <td>return true 代表已登陆</td>
-                    </tr>
-                </table>
 
-                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
-                   aria-controls="collapseExample">
-                    json
-                </a>
 
-                <div class="collapse" id="collapseExample">
-                    <div class="well">
-                        json
-                    </div>
-                </div>
 
-                <table id="table" class="table table-hover table-bordered">
-
-                </table>
             </div>
         </div>
         <!--/.col-xs-12.col-sm-9-->
 
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-            <div class="list-group">
-                <a href="#login" class="list-group-item">login</a>
-                <a href="#" class="list-group-item">Link</a>
+            <div id="nav_list" class="list-group">
             </div>
         </div>
         <!--/.sidebar-offcanvas-->

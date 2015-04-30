@@ -5,8 +5,16 @@ function initService(serviceList){
     var ${service.name}Table = createTable(${service.name}Service.params);
     ${service.name}Div.append(${service.name}Table);
     serviceList.append(${service.name}Div);
-    serviceList.append("<hr/>");
+    serviceList.append('<a class="btn btn-primary" data-toggle="collapse" href="#collapse${service.name}" aria-expanded="false" aria-controls="collapseExample"> json </a>');
+    serviceList.append('<div class="collapse" id="collapse${service.name}"><div class="well"> ${service.comment} </div></div>');
+    serviceList.append("<div/><br/><hr/>");
 
+</#list>
+}
+
+function initServiceNav(navList){
+<#list services as service>
+    navList.append('<a href="entity.jsp#${service.name}" class="list-group-item">${service.name}</a>');
 </#list>
 }
 
@@ -17,8 +25,16 @@ function initEntity(serviceList){
     var ${entity.name}Table = createTable(${entity.name}Entity.params);
     ${entity.name}Div.append(${entity.name}Table);
     serviceList.append(${entity.name}Div);
-    serviceList.append("<hr/>");
+    serviceList.append('<a class="btn btn-primary" data-toggle="collapse" href="#collapse${entity.name}" aria-expanded="false" aria-controls="collapseExample"> json </a>');
+    serviceList.append('<div class="collapse" id="collapse${entity.name}"><div class="well"> ${entity.comment} </div></div>');
+    serviceList.append("<div/><br/><hr/>");
 
+</#list>
+}
+
+function initEntityNav(navList){
+<#list entities as entity>
+    navList.append('<a href="#${entity.name}" class="list-group-item">${entity.name}</a>');
 </#list>
 }
 

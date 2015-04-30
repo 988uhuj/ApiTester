@@ -3,7 +3,11 @@ $(document).ready(function () {
 
     var serviceList = $('#service_list');
     initService(serviceList);
+
+    var navList = $('#nav_list');
+    initServiceNav(navList);
 });
+
 
 
 

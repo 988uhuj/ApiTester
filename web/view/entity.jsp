@@ -7,7 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="zh-CN">
-<jsp:include page="./path.jsp"/>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,8 +40,8 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="./view/index.jsp">Service</a></li>
-                <li class="active"><a href="./view/entity.jsp">Entity</a></li>
+                <li><a href="./index.jsp">Service</a></li>
+                <li class="active"><a href="./entity.jsp">Entity</a></li>
             </ul>
         </div>
         <!-- /.nav-collapse -->
@@ -68,24 +67,12 @@
             <!--/row-->
             <div id="service_list">
 
-                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
-                   aria-controls="collapseExample">
-                    json
-                </a>
-
-                <div class="collapse" id="collapseExample">
-                    <div class="well">
-                        json
-                    </div>
-                </div>
             </div>
         </div>
         <!--/.col-xs-12.col-sm-9-->
 
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-            <div class="list-group">
-                <a href="#login" class="list-group-item">login</a>
-                <a href="#" class="list-group-item">Link</a>
+            <div id="nav_list" class="list-group">
             </div>
         </div>
         <!--/.sidebar-offcanvas-->
