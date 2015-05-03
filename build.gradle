@@ -29,14 +29,29 @@ dependencies {
 }
 
 jar {
-    exclude 'com/netease/common/**'
-    exclude 'com/netease/apigenerate/**'
-    exclude '*.ftl'
+//    exclude 'com/netease/doc/**'
+//    exclude 'com/netease/apigenerate/**'
+//    exclude '*.ftl'
+    include 'com/netease/gen/**'
 }
 
-task execute(type:JavaExec) {
-    main = 'com.netease.service.Generate'
-    classpath = sourceSets.main.runtimeClasspath
-}
+//task genJar(type: jar) {
+////    include 'com/netease/gen/**'
+//}
+//
+//task execute(type: JavaExec) {
+//    main = 'com.netease.service.Generate'
+//    classpath = sourceSets.main.runtimeClasspath
+//}
+//
+//jar.dependsOn execute
 
-jar.dependsOn execute
+task myDoclet(type: Javadoc) {
+    source = sourceSets.main.allJava
+    classpath = configurations.compile
+    destinationDir = file("./doc/")
+
+//    source = sourceSets.main.java.include {'com/netease/doc/**'}
+    options.doclet = "com.netease.gen.DocGenerate"
+    classpath = configurations.compile
+}

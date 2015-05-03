@@ -1,2 +1,2 @@
-javadoc -docletpath build/classes/main -doclet com.netease.doc.DocTest -sourcepath src/main/java src/main/java/com/netease/doc/UserService.java
+javadoc -docletpath build/classes/main -doclet com.netease.gen.DocGenerate -sourcepath src src/com/netease/doc/TestService.java
 pause

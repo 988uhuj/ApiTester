@@ -1,6 +1,7 @@
 package com.netease.service;
 
 
+import com.netease.gen.DocGenerate;
 import freemarker.template.Configuration;
 import freemarker.template.DefaultObjectWrapper;
 import freemarker.template.Template;
@@ -17,8 +18,10 @@ import java.io.Writer;
 public class FreeMarkerUtil {
 
     public static void run(ServiceBuilder serviceBuilder) {
+        DocGenerate generate;
         Configuration cfg = new Configuration();
         try {
+            System.out.println("write begin");
             cfg.setClassForTemplateLoading(FreeMarkerUtil.class, "/");
             cfg.setObjectWrapper(new DefaultObjectWrapper());
             Template service = cfg.getTemplate("services.ftl");
@@ -35,6 +38,7 @@ public class FreeMarkerUtil {
             file.close();
 //            indexFile.flush();
 //            indexFile.close();
+            System.out.println("write end");
         } catch (Exception e) {
             e.printStackTrace();
         }
